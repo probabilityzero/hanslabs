@@ -44,13 +44,13 @@ const statusColors = {
 
 export function FeaturedProjects() {
   return (
-    <section className="py-24 lg:py-32 bg-card/50">
+    <section className="py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-16">
           <div>
             <p className="text-sm font-semibold text-primary uppercase tracking-wide">Featured Work</p>
             <h2 className="mt-2 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-              Recent Projects & POCs
+              Recent Projects 
             </h2>
           </div>
           <Button variant="ghost" asChild>

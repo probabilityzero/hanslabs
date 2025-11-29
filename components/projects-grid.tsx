@@ -33,7 +33,6 @@ export function ProjectsGrid({ projects, tags }: ProjectsGridProps) {
         {/* Filters */}
         <div className="mb-12 space-y-4">
           <div className="flex flex-wrap items-center gap-2">
-            <span className="text-sm font-medium text-muted-foreground mr-2">Filter by tag:</span>
             <Button
               variant={selectedTag === null ? "default" : "outline"}
               size="sm"
@@ -53,27 +52,6 @@ export function ProjectsGrid({ projects, tags }: ProjectsGridProps) {
             ))}
           </div>
 
-          <div className="flex flex-wrap items-center gap-2">
-            <span className="text-sm font-medium text-muted-foreground mr-2">Filter by status:</span>
-            <Button
-              variant={selectedStatus === null ? "default" : "outline"}
-              size="sm"
-              onClick={() => setSelectedStatus(null)}
-            >
-              All
-            </Button>
-            {["product", "prototype", "research"].map((status) => (
-              <Button
-                key={status}
-                variant={selectedStatus === status ? "default" : "outline"}
-                size="sm"
-                onClick={() => setSelectedStatus(status)}
-                className="capitalize"
-              >
-                {status}
-              </Button>
-            ))}
-          </div>
         </div>
 
         {/* Projects Grid */}

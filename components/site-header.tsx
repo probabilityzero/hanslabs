@@ -8,10 +8,9 @@ import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const navigation = [
-    { name: "About", href: "/about" },
-    { name: "Expertise", href: "/expertise" },
-    { name: "Projects", href: "/projects" },
-    { name: "Careers", href: "/careers" },
+    { name: "Services", href: "/services" },
+    { name: "Showcase", href: "/showcase" },
+    { name: "Company", href: "/company" },
 ]
 
 export function SiteHeader() {
@@ -96,7 +95,7 @@ export function SiteHeader() {
 
                     <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-4 items-center">
                         <Button asChild>
-                            <Link href="/contact">
+                            <Link href="/company/contact">
                                 Work With Us
                                 <ArrowRight className="ml-2 h-4 w-4" />
                             </Link>

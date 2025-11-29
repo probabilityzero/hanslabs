@@ -37,7 +37,6 @@ export default async function JobPage({ params }: { params: Promise<{ slug: stri
 
   return (
     <div className="min-h-screen bg-background">
-      <SiteHeader />
       <main>
         {/* Header */}
         <section className="py-16 lg:py-24 border-b border-border">
@@ -150,7 +149,6 @@ export default async function JobPage({ params }: { params: Promise<{ slug: stri
           </div>
         </section>
       </main>
-      <SiteFooter />
     </div>
   )
 }

@@ -25,12 +25,12 @@ const pillars = [
 
 export function PillarsSection() {
   return (
-    <section className="py-24 lg:py-32">
+    <section className="py-24 lg:py-32 bg-card/50">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <p className="text-sm font-semibold text-primary uppercase tracking-wide">What we do</p>
           <h2 className="mt-2 text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance">
-            Our collection of capabilities spans every stage of the innovation process
+            Our expertise spans every stage of the innovation process
           </h2>
           <p className="mt-6 text-lg text-muted-foreground">
             Explore how we help organizations transform ideas into production-ready solutions.

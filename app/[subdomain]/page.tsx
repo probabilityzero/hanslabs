@@ -14,6 +14,7 @@ export default function HomePage() {
         <HeroSection />
         <PillarsSection />
         <FeaturedProjects />
+        <ResearchHighlights />
         <StatsSection />
         <CTASection />
       </main>

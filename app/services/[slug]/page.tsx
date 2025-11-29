@@ -45,7 +45,6 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
 
   return (
     <div className="min-h-screen bg-background">
-      <SiteHeader />
       <main>
         {/* Hero */}
         <section className="py-16 lg:py-24 relative overflow-hidden border-b border-border">
@@ -233,7 +232,6 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
 
         <CTASection />
       </main>
-      <SiteFooter />
     </div>
   )
 }

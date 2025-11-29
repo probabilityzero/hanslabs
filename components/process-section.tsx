@@ -33,7 +33,7 @@ export function ProcessSection() {
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-sm font-semibold text-primary uppercase tracking-wide">Our Process</p>
           <h2 className="mt-2 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            Research → Prototype → Product
+            Research → Prototype → Produce
           </h2>
           <p className="mt-6 text-lg text-muted-foreground">
             A systematic approach to turning complex ideas into production-ready solutions.

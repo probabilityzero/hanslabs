@@ -10,7 +10,7 @@ export function DocsSidebar() {
 
   return (
     <aside className="hidden lg:block">
-      <div className="sticky top-24 space-y-8">
+      <div className="sticky top-32 space-y-8">
         {docsCategories.map((category) => {
           const pages = getDocsByCategory(category.id)
 

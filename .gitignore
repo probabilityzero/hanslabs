@@ -1,0 +1,62 @@
+# Node modules
+node_modules/
+
+# Next.js build output
+.next/
+out/
+
+# Production
+dist/
+build/
+
+# pnpm store
+.pnpm-store/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+logs/
+*.log
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# TypeScript
+*.tsbuildinfo
+
+# Testing
+coverage/
+jest.config.ts
+jest.config.js
+*.lcov
+
+# Editor directories and files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Mac/Windows files
+.DS_Store
+Thumbs.db
+
+# Misc caches
+.cache/
+.parcel-cache/
+.next/cache/
+
+# Deployment
+.vercel/
+.vercel_build_output/
+.now/
+.netlify/
+
+# Other
+*.tgz
+coverage/

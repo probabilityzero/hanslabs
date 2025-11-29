@@ -10,7 +10,6 @@ import { CTASection } from "@/components/cta-section"
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-background">
-      <SiteHeader />
       <main>
         <HeroSection />
         <PillarsSection />
@@ -19,7 +18,6 @@ export default function HomePage() {
         <StatsSection />
         <CTASection />
       </main>
-      <SiteFooter />
     </div>
   )
 }

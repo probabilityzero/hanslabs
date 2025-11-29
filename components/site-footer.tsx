@@ -1,145 +1,152 @@
 import Link from "next/link"
-import { Github, Linkedin, Twitter } from "lucide-react"
-import { Input } from "@/components/ui/input"
-import { Button } from "@/components/ui/button"
+import Image from "next/image"
+import { ArrowUpRight } from "lucide-react"
+import { ThemeToggle } from "@/components/theme-toggle"
 
 const footerLinks = {
+  expertise: [
+    { name: "AI & Machine Learning", href: "/expertise#ai-ml" },
+    { name: "Full-Stack Development", href: "/expertise#fullstack" },
+    { name: "Cloud Architecture", href: "/expertise#cloud" },
+    { name: "System Design", href: "/expertise#system-design" },
+  ],
   company: [
     { name: "About", href: "/about" },
+    { name: "Projects", href: "/projects" },
     { name: "Careers", href: "/careers" },
     { name: "Contact", href: "/contact" },
   ],
-  capabilities: [
-    { name: "Technology & Engineering", href: "/capabilities#technology" },
-    { name: "Creative Experiences", href: "/capabilities#creative" },
-    { name: "Intelligent Systems", href: "/capabilities#ai" },
-  ],
   resources: [
-    { name: "Projects", href: "/projects" },
-    { name: "Research", href: "/research" },
+    { name: "Blog", href: "/blog" },
     { name: "Documentation", href: "/docs" },
+    { name: "Research", href: "/research" },
   ],
-  legal: [
-    { name: "Privacy Policy", href: "/privacy" },
-    { name: "Terms of Service", href: "/terms" },
+  social: [
+    { name: "GitHub", href: "https://github.com/hanslabs" },
+    { name: "LinkedIn", href: "https://linkedin.com/company/hanslabs" },
+    { name: "Twitter", href: "https://twitter.com/hanslabs" },
   ],
 }
 
-const socialLinks = [
-  { name: "GitHub", href: "https://github.com", icon: Github },
-  { name: "LinkedIn", href: "https://linkedin.com", icon: Linkedin },
-  { name: "Twitter", href: "https://twitter.com", icon: Twitter },
-]
-
 export function SiteFooter() {
   return (
-    <footer className="bg-card border-t border-border">
+    <footer className="border-t border-border bg-card">
       <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8 lg:py-16">
-        <div className="xl:grid xl:grid-cols-3 xl:gap-8">
-          <div className="space-y-8">
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-                <span className="font-mono font-bold text-primary-foreground text-sm">H</span>
-              </div>
+        <div className="grid grid-cols-2 gap-8 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5">
+          {/* Brand */}
+          <div className="col-span-2 sm:col-span-2 md:col-span-4 lg:col-span-1 mb-8 lg:mb-0">
+            <Link href="/" className="flex items-center gap-2">
+              <Image
+                src="/logo.png"
+                alt="Han's Labs Logo"
+                width={40}
+                height={40}
+                className="rounded-lg"
+              />
               <span className="font-semibold text-foreground">Han's Labs</span>
-            </div>
-            <p className="text-sm leading-6 text-muted-foreground max-w-xs">
-              An R&D-first creative engineering lab building the future through research, prototypes, and
-              production-ready solutions.
+            </Link>
+            <p className="mt-4 text-sm text-muted-foreground max-w-xs">
+              Building intelligent solutions at the intersection of AI and software engineering.
             </p>
-            <div className="flex gap-4">
-              {socialLinks.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className="text-muted-foreground hover:text-foreground transition-colors"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span className="sr-only">{item.name}</span>
-                  <item.icon className="h-5 w-5" aria-hidden="true" />
-                </Link>
-              ))}
-            </div>
           </div>
 
-          <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
-            <div className="md:grid md:grid-cols-2 md:gap-8">
-              <div>
-                <h3 className="text-sm font-semibold text-foreground">Company</h3>
-                <ul role="list" className="mt-6 space-y-4">
-                  {footerLinks.company.map((item) => (
-                    <li key={item.name}>
-                      <Link
-                        href={item.href}
-                        className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                      >
-                        {item.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="mt-10 md:mt-0">
-                <h3 className="text-sm font-semibold text-foreground">Capabilities</h3>
-                <ul role="list" className="mt-6 space-y-4">
-                  {footerLinks.capabilities.map((item) => (
-                    <li key={item.name}>
-                      <Link
-                        href={item.href}
-                        className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                      >
-                        {item.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-            <div className="md:grid md:grid-cols-2 md:gap-8">
-              <div>
-                <h3 className="text-sm font-semibold text-foreground">Resources</h3>
-                <ul role="list" className="mt-6 space-y-4">
-                  {footerLinks.resources.map((item) => (
-                    <li key={item.name}>
-                      <Link
-                        href={item.href}
-                        className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                      >
-                        {item.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="mt-10 md:mt-0">
-                <h3 className="text-sm font-semibold text-foreground">Newsletter</h3>
-                <p className="mt-6 text-sm text-muted-foreground">Get updates on our latest research and projects.</p>
-                <form className="mt-4 flex gap-2">
-                  <Input type="email" placeholder="Enter your email" className="flex-1" />
-                  <Button type="submit" size="sm">
-                    Subscribe
-                  </Button>
-                </form>
-              </div>
-            </div>
+          {/* Expertise */}
+          <div>
+            <h3 className="text-sm font-semibold text-foreground">Expertise</h3>
+            <ul className="mt-4 space-y-3">
+              {footerLinks.expertise.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+          
+          {/* Resources */}
+          <div>
+            <h3 className="text-sm font-semibold text-foreground">Resources</h3>
+            <ul className="mt-4 space-y-3">
+              {footerLinks.resources.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+
+          {/* Company */}
+          <div>
+            <h3 className="text-sm font-semibold text-foreground">Company</h3>
+            <ul className="mt-4 space-y-3">
+              {footerLinks.company.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Social */}
+          <div>
+            <h3 className="text-sm font-semibold text-foreground">Connect</h3>
+            <ul className="mt-4 space-y-3">
+              {footerLinks.social.map((link) => (
+                <li key={link.name}>
+                  <a
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-1"
+                  >
+                    {link.name}
+                    <ArrowUpRight className="h-3 w-3" />
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
 
-        <div className="mt-16 border-t border-border pt-8 sm:mt-20 lg:mt-24 flex flex-col sm:flex-row justify-between gap-4">
-          <p className="text-xs text-muted-foreground">
-            &copy; {new Date().getFullYear()} Han's Labs. All rights reserved.
-          </p>
-          <div className="flex gap-6">
-            {footerLinks.legal.map((item) => (
+        <div className="m-2 mr-6 flex justify-end">
+          <ThemeToggle />
+        </div>
+
+        {/* Bottom bar */}
+        <div className="mt-8 pt-8 border-t border-border">
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+            <p className="text-sm text-muted-foreground text-center sm:text-left">
+              © {new Date().getFullYear()} Han's Labs. All rights reserved.
+            </p>
+            <div className="flex gap-6">
               <Link
-                key={item.name}
-                href={item.href}
-                className="text-xs text-muted-foreground hover:text-foreground transition-colors"
+                href="/privacy"
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
-                {item.name}
+                Privacy
               </Link>
-            ))}
+              <Link
+                href="/terms"
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              >
+                Terms
+              </Link>
+            </div>
           </div>
         </div>
       </div>

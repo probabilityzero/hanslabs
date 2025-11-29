@@ -48,7 +48,7 @@ export default async function ResearchArticlePage({ params }: { params: Promise<
   return (
     <div className="min-h-screen bg-background">
       <SiteHeader />
-      <main className="pt-20">
+      <main>
         {/* Hero */}
         <section className="py-16 lg:py-24 border-b border-border">
           <div className="mx-auto max-w-4xl px-6 lg:px-8">

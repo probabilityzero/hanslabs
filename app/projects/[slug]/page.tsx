@@ -46,7 +46,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
   return (
     <div className="min-h-screen bg-background">
       <SiteHeader />
-      <main className="pt-20">
+      <main>
         {/* Hero */}
         <section className="py-16 lg:py-24 relative overflow-hidden border-b border-border">
           <div className="absolute inset-0 grid-pattern opacity-20" />

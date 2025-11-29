@@ -3,81 +3,102 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* <CHANGE> Han's Labs dark sophisticated theme - deep slate with cyan accent */
+/* Han's Labs - Light Mode Theme */
 :root {
-  --background: oklch(0.13 0.01 250);
-  --foreground: oklch(0.95 0.01 250);
-  --card: oklch(0.16 0.01 250);
-  --card-foreground: oklch(0.95 0.01 250);
-  --popover: oklch(0.16 0.01 250);
-  --popover-foreground: oklch(0.95 0.01 250);
-  --primary: oklch(0.75 0.15 195);
-  --primary-foreground: oklch(0.13 0.01 250);
-  --secondary: oklch(0.22 0.01 250);
-  --secondary-foreground: oklch(0.85 0.01 250);
-  --muted: oklch(0.2 0.01 250);
-  --muted-foreground: oklch(0.65 0.01 250);
-  --accent: oklch(0.75 0.15 195);
-  --accent-foreground: oklch(0.13 0.01 250);
-  --destructive: oklch(0.55 0.2 25);
-  --destructive-foreground: oklch(0.95 0.01 250);
-  --border: oklch(0.25 0.01 250);
-  --input: oklch(0.2 0.01 250);
-  --ring: oklch(0.75 0.15 195);
-  --chart-1: oklch(0.75 0.15 195);
-  --chart-2: oklch(0.65 0.12 160);
-  --chart-3: oklch(0.55 0.1 280);
-  --chart-4: oklch(0.7 0.14 85);
-  --chart-5: oklch(0.6 0.16 340);
+  --background: #F5F5F7;
+  --foreground: #1A1C20;
+  --card: #FFFFFF;
+  --card-foreground: #1A1C20;
+  --popover: #FFFFFF;
+  --popover-foreground: #1A1C20;
+  --primary: #C6A356;
+  --primary-foreground: #FDFDFD;
+  --secondary: #E8E9EC;
+  --secondary-foreground: #1A1C20;
+  --muted: #E8E9EC;
+  --muted-foreground: #5A5E66;
+  --accent: #9EA3AC;
+  --accent-foreground: #1A1C20;
+  --destructive: #DC2626;
+  --destructive-foreground: #FDFDFD;
+  --border: #D8DBE0;
+  --input: #E8E9EC;
+  --ring: #C6A356;
+  --chart-1: #C6A356;
+  --chart-2: #9EA3AC;
+  --chart-3: #A57A49;
+  --chart-4: #5A5E66;
+  --chart-5: #1A1C20;
   --radius: 0.5rem;
-  --sidebar: oklch(0.11 0.01 250);
-  --sidebar-foreground: oklch(0.95 0.01 250);
-  --sidebar-primary: oklch(0.75 0.15 195);
-  --sidebar-primary-foreground: oklch(0.13 0.01 250);
-  --sidebar-accent: oklch(0.2 0.01 250);
-  --sidebar-accent-foreground: oklch(0.95 0.01 250);
-  --sidebar-border: oklch(0.25 0.01 250);
-  --sidebar-ring: oklch(0.75 0.15 195);
+  
+  /* Sidebar */
+  --sidebar: #FFFFFF;
+  --sidebar-foreground: #1A1C20;
+  --sidebar-primary: #C6A356;
+  --sidebar-primary-foreground: #FDFDFD;
+  --sidebar-accent: #E8E9EC;
+  --sidebar-accent-foreground: #1A1C20;
+  --sidebar-border: #D8DBE0;
+  --sidebar-ring: #C6A356;
+  
+  /* Custom Han's Labs tokens */
+  --gold: #C6A356;
+  --gold-hover: #D4B366;
+  --copper: #A57A49;
+  --silver: #9EA3AC;
+  --surface-1: #FFFFFF;
+  --surface-2: #F0F0F2;
 }
 
+/* Han's Labs - Dark Mode Theme (Primary) */
 .dark {
-  --background: oklch(0.13 0.01 250);
-  --foreground: oklch(0.95 0.01 250);
-  --card: oklch(0.16 0.01 250);
-  --card-foreground: oklch(0.95 0.01 250);
-  --popover: oklch(0.16 0.01 250);
-  --popover-foreground: oklch(0.95 0.01 250);
-  --primary: oklch(0.75 0.15 195);
-  --primary-foreground: oklch(0.13 0.01 250);
-  --secondary: oklch(0.22 0.01 250);
-  --secondary-foreground: oklch(0.85 0.01 250);
-  --muted: oklch(0.2 0.01 250);
-  --muted-foreground: oklch(0.65 0.01 250);
-  --accent: oklch(0.75 0.15 195);
-  --accent-foreground: oklch(0.13 0.01 250);
-  --destructive: oklch(0.55 0.2 25);
-  --destructive-foreground: oklch(0.95 0.01 250);
-  --border: oklch(0.25 0.01 250);
-  --input: oklch(0.2 0.01 250);
-  --ring: oklch(0.75 0.15 195);
-  --chart-1: oklch(0.75 0.15 195);
-  --chart-2: oklch(0.65 0.12 160);
-  --chart-3: oklch(0.55 0.1 280);
-  --chart-4: oklch(0.7 0.14 85);
-  --chart-5: oklch(0.6 0.16 340);
-  --sidebar: oklch(0.11 0.01 250);
-  --sidebar-foreground: oklch(0.95 0.01 250);
-  --sidebar-primary: oklch(0.75 0.15 195);
-  --sidebar-primary-foreground: oklch(0.13 0.01 250);
-  --sidebar-accent: oklch(0.2 0.01 250);
-  --sidebar-accent-foreground: oklch(0.95 0.01 250);
-  --sidebar-border: oklch(0.25 0.01 250);
-  --sidebar-ring: oklch(0.75 0.15 195);
+  --background: #0E0F14;
+  --foreground: #E4E7EA;
+  --card: #14161E;
+  --card-foreground: #E4E7EA;
+  --popover: #1B1E26;
+  --popover-foreground: #E4E7EA;
+  --primary: #E7C878;
+  --primary-foreground: #0D0F14;
+  --secondary: #1B1E26;
+  --secondary-foreground: #E4E7EA;
+  --muted: #1B1E26;
+  --muted-foreground: #A5A9B0;
+  --accent: #A57A49;
+  --accent-foreground: #E4E7EA;
+  --destructive: #DC2626;
+  --destructive-foreground: #E4E7EA;
+  --border: #262A33;
+  --input: #1B1E26;
+  --ring: #E7C878;
+  --chart-1: #E7C878;
+  --chart-2: #A57A49;
+  --chart-3: #C8C8C8;
+  --chart-4: #A5A9B0;
+  --chart-5: #5A5E66;
+  
+  /* Sidebar */
+  --sidebar: #11131A;
+  --sidebar-foreground: #E4E7EA;
+  --sidebar-primary: #E7C878;
+  --sidebar-primary-foreground: #0D0F14;
+  --sidebar-accent: #1B1E26;
+  --sidebar-accent-foreground: #E4E7EA;
+  --sidebar-border: #262A33;
+  --sidebar-ring: #E7C878;
+  
+  /* Custom Han's Labs tokens */
+  --gold: #E7C878;
+  --gold-hover: #F0D48B;
+  --copper: #A57A49;
+  --silver: #C8C8C8;
+  --surface-1: #14161E;
+  --surface-2: #1B1E26;
 }
 
 @theme inline {
-  --font-sans: "Geist", "Geist Fallback";
-  --font-mono: "Geist Mono", "Geist Mono Fallback";
+  --font-sans: "Geist", "Inter", system-ui, sans-serif;
+  --font-mono: "Geist Mono", "JetBrains Mono", monospace;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -114,6 +135,14 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  
+  /* Custom colors */
+  --color-gold: var(--gold);
+  --color-gold-hover: var(--gold-hover);
+  --color-copper: var(--copper);
+  --color-silver: var(--silver);
+  --color-surface-1: var(--surface-1);
+  --color-surface-2: var(--surface-2);
 }
 
 @layer base {
@@ -122,22 +151,49 @@
   }
   body {
     @apply bg-background text-foreground;
+    transition: background-color 0.2s ease, color 0.2s ease;
   }
 }
 
-/* <CHANGE> Custom utility classes for Han's Labs */
+/* Custom utility classes for Han's Labs */
 @layer utilities {
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-[oklch(0.65_0.12_160)];
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, var(--gold) 0%, var(--copper) 100%);
   }
 
-  .glow {
-    box-shadow: 0 0 40px -10px oklch(0.75 0.15 195 / 0.3);
+  .glow-gold {
+    box-shadow: 0 0 40px -10px var(--gold);
+  }
+  
+  .glow-gold-sm {
+    box-shadow: 0 0 20px -5px var(--gold);
+  }
+
+  .border-gold {
+    border-color: var(--gold);
   }
 
   .grid-pattern {
-    background-image: linear-gradient(oklch(0.25 0.01 250 / 0.5) 1px, transparent 1px),
-      linear-gradient(90deg, oklch(0.25 0.01 250 / 0.5) 1px, transparent 1px);
+    background-image: linear-gradient(var(--border) 1px, transparent 1px),
+      linear-gradient(90deg, var(--border) 1px, transparent 1px);
     background-size: 60px 60px;
+  }
+  
+  .circuit-lines {
+    background-image: 
+      linear-gradient(90deg, var(--gold) 1px, transparent 1px),
+      linear-gradient(var(--gold) 1px, transparent 1px);
+    background-size: 20px 20px;
+    opacity: 0.1;
+  }
+  
+  /* Metallic gradient for special elements */
+  .metallic-silver {
+    background: linear-gradient(135deg, #C8C8C8 0%, #E0E0E0 50%, #C8C8C8 100%);
+  }
+  
+  .metallic-gold {
+    background: linear-gradient(135deg, #C6A356 0%, #E7C878 50%, #C6A356 100%);
   }
 }

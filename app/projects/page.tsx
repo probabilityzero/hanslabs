@@ -13,8 +13,7 @@ export default function ProjectsPage() {
 
   return (
     <div className="min-h-screen bg-background">
-      <SiteHeader />
-      <main className="pt-20">
+      <main>
         {/* Hero */}
         <section className="py-24 lg:py-32 relative overflow-hidden">
           <div className="absolute inset-0 grid-pattern opacity-20" />
@@ -35,7 +34,6 @@ export default function ProjectsPage() {
 
         <ProjectsGrid projects={projects} tags={tags} />
       </main>
-      <SiteFooter />
     </div>
   )
 }

@@ -46,7 +46,7 @@ export default async function DocPage({ params }: { params: Promise<{ slug: stri
   return (
     <div className="min-h-screen bg-background">
       <SiteHeader />
-      <main className="pt-20">
+      <main>
         <div className="mx-auto max-w-7xl px-6 lg:px-8 py-16">
           <div className="grid lg:grid-cols-4 gap-12">
             <DocsSidebar />

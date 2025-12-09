@@ -5,8 +5,7 @@ import { remark } from "remark"
 import html from "remark-html"
 import remarkGfm from "remark-gfm"
 import { codeToHtml } from "shiki"
-import { ArrowLeft } from "lucide-react"
-import { BackLink } from "@/components/breadcrumb"
+import { BackLink } from "@/components/ui/breadcrumb"
 
 interface Props {
   params: Promise<{ slug: string }>

@@ -33,10 +33,9 @@ export function formatHelp(commands: Command[]): string[] {
     "",
   ]
 
-  const categories = ["navigation", "system", "utility"] as const
+  const categories = ["navigation", "utility"] as const
   const categoryNames = {
     navigation: "Navigation",
-    system: "System",
     utility: "Utility",
   }
 

@@ -9,8 +9,9 @@ import {
   ExternalLink,
   AlertCircle
 } from "lucide-react"
-import { CopyButton } from "../../../components/copy-button"
-import { BackLink } from "@/components/breadcrumb"
+import { CopyButton } from "../../../components/ui/copy-button"
+import { BackLink } from "@/components/ui/breadcrumb"
+import { SlideDown } from "@/components/hero-transitions"
 
 export const metadata = {
   title: "API Routes | Han's Labs Admin",
@@ -138,9 +139,8 @@ export default async function APIRoutesPage() {
     <div className="min-h-screen bg-background">
       <div className="mx-auto max-w-6xl px-6 py-16">
         <BackLink href="/admin" label="admin" />
-
-        <div className="mb-12">
-          <div className="flex items-center gap-3 mb-4">
+        <SlideDown>
+          <div className="flex items-center gap-3 mb-12">
             <div className="p-2.5 rounded-lg bg-primary/10">
               <Globe className="h-6 w-6 text-primary" />
             </div>
@@ -153,7 +153,7 @@ export default async function APIRoutesPage() {
               </p>
             </div>
           </div>
-        </div>
+        </SlideDown>
 
         {/* Stats */}
         <div className="grid sm:grid-cols-3 gap-4 mb-8">

@@ -1,7 +1,7 @@
 import { Mail, MapPin, Phone, Clock, ArrowUpRight } from "lucide-react"
 import { ContactForm } from "@/components/contact-form"
-import { AnimatedBackground } from "@/components/animated-background"
-import { FadeUp } from "@/components/animations"
+import { AnimatedBackground } from "@/components/hero-grid-blobs"
+import { FadeUp } from "@/components/hero-transitions"
 
 export const metadata = {
   title: "Contact | Han's Labs",

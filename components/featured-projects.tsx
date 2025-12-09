@@ -2,45 +2,15 @@ import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-
-const featuredProjects = [
-  {
-    slug: "framedb",
-    title: "FrameDB",
-    description:
-      "A high-performance temporal database designed for real-time analytics and time-series data with sub-millisecond query latency.",
-    status: "product",
-    tags: ["Database", "Rust", "Time-Series"],
-    image: "/abstract-database-visualization-dark-theme.jpg",
-    hasDemo: true,
-  },
-  {
-    slug: "neural-canvas",
-    title: "Neural Canvas",
-    description:
-      "AI-powered creative tool that transforms sketches into production-ready illustrations using diffusion models.",
-    status: "prototype",
-    tags: ["AI", "Computer Vision", "React"],
-    image: "/ai-art-generation-interface-dark-theme.jpg",
-    hasDemo: true,
-  },
-  {
-    slug: "quantum-sim",
-    title: "Quantum Simulator",
-    description:
-      "Educational quantum computing simulator with visual circuit builder and real-time state visualization.",
-    status: "research",
-    tags: ["Quantum", "Simulation", "WebGL"],
-    image: "/quantum-computing-visualization-dark-theme.jpg",
-    hasDemo: false,
-  },
-]
+import { projects } from "@/lib/projects-data" 
 
 const statusColors = {
   product: "bg-green-500/10 text-green-400 border-green-500/20",
   prototype: "bg-primary/10 text-primary border-primary/20",
   research: "bg-yellow-500/10 text-yellow-400 border-yellow-500/20",
 }
+
+const featuredProjects = projects.filter((p) => p.isFeatured) 
 
 export function FeaturedProjects() {
   return (

@@ -3,7 +3,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { usePathname } from "next/navigation"
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
@@ -18,6 +18,7 @@ export function SiteHeader() {
     const [, setIsLoading] = useState(false)
     const [, setLoadingProgress] = useState(0)
     const pathname = usePathname()
+    const [hoveredNav, setHoveredNav] = useState<string | null>(null)
 
     const isContactPage = pathname === "/company/contact"
     const isActivePage = (href: string) => {
@@ -73,7 +74,7 @@ export function SiteHeader() {
                     <div className="flex lg:flex-1">
                         <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-2 group">
                             <Image
-                                src="/logo.png"
+                                src="/logo-200px.png"
                                 alt="Han's Labs Logo"
                                 width={40}
                                 height={40}
@@ -87,6 +88,7 @@ export function SiteHeader() {
                         <Button size="sm" asChild>
                             <Link href="/company/contact">Get in Touch</Link>
                         </Button>
+
                         <button
                             type="button"
                             className="relative w-6 h-6 flex items-center justify-center text-muted-foreground hover:text-foreground transition-colors"
@@ -110,13 +112,15 @@ export function SiteHeader() {
                             />
                         </button>
                     </div>
-
+                    
                     <div className="hidden lg:flex lg:gap-x-8">
                         {navigation.map((item) => (
                             <Link
                                 key={item.name}
                                 href={item.href}
                                 className="relative text-sm font-medium transition-colors group py-1"
+                                onMouseEnter={() => setHoveredNav(item.href)}
+                                onMouseLeave={() => setHoveredNav(null)}
                             >
                                 <span className={`transition-colors duration-200 ${
                                     isActivePage(item.href) 
@@ -125,12 +129,14 @@ export function SiteHeader() {
                                 }`}>
                                     {item.name}
                                 </span>
-                                <span 
-                                    className={`absolute bottom-1 left-0 h-0.5 bg-primary rounded-full transition-all duration-300 ease-out ${
-                                        isActivePage(item.href) 
-                                            ? "w-full" 
-                                            : "w-0 group-hover:w-full"
-                                    }`}
+                                <span
+                                    className={`
+                                        absolute bottom-1 left-0 h-0.5 w-full bg-primary rounded-full
+                                        transform transition-transform duration-300 ease-out
+                                        ${hoveredNav === item.href || isActivePage(item.href)
+                                            ? "scale-x-100 origin-left"
+                                            : "scale-x-0 origin-right"}
+                                    `}
                                 />
                             </Link>
                         ))}

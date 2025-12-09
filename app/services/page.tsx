@@ -1,7 +1,7 @@
 import { CTASection } from "@/components/cta-section"
 import { ServicesDetail } from "@/components/services-detail"
-import { AnimatedBackground } from "@/components/animated-background"
-import { FadeUp } from "@/components/animations"
+import { AnimatedBackground } from "@/components/hero-grid-blobs"
+import { FadeUp } from "@/components/hero-transitions"
 import { expertise } from "@/lib/services-data"
 
 export const metadata = {

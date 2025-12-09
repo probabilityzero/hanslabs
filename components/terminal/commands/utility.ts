@@ -61,6 +61,17 @@ export function createUtilityCommands(ctx: CommandContext): Command[] {
       },
     },
     {
+      id: "theme",
+      keys: ["dark", "light"],
+      description: "Toggle theme",
+      category: "system",
+      action: () => {
+        const newTheme = ctx.theme.current === "dark" ? "light" : "dark"
+        ctx.terminal.addToHistory(`\x1b[32mTheme switched to ${newTheme} mode\x1b[0m`)
+        ctx.theme.toggle()
+      },
+    },
+    {
       id: "uptime",
       keys: ["uptime"],
       description: "Show session uptime",

@@ -2,8 +2,8 @@ import { CTASection } from "@/components/cta-section"
 import { TeamSection } from "@/components/team-section"
 import { TimelineSection } from "@/components/timeline-section"
 import { ProcessSection } from "@/components/process-section"
-import { AnimatedBackground } from "@/components/animated-background"
-import { FadeUp } from "@/components/animations"
+import { AnimatedBackground } from "@/components/hero-grid-blobs"
+import { FadeUp } from "@/components/hero-transitions"
 
 export const metadata = {
   title: "About | Han's Labs",

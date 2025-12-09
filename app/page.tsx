@@ -2,7 +2,7 @@ import Link from "next/link"
 import dynamic from "next/dynamic"
 import { ArrowRight, Play } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { FadeUp } from "@/components/animations"
+import { FadeUp } from "@/components/hero-transitions"
 
 const PillarsSection = dynamic(() => import("@/components/pillars-section").then(m => ({ default: m.PillarsSection })))
 const FeaturedProjects = dynamic(() => import("@/components/featured-projects").then(m => ({ default: m.FeaturedProjects })))
@@ -13,10 +13,10 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-background">
       <main>
-        <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <section className="relative min-h-screen flex items-start justify-center overflow-hidden">
           <div className="absolute inset-0 grid-pattern opacity-30" />
 
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-gradient-shift-1" />
+          <div className="absolute top-1/8 left-1/8 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-gradient-shift-1" />
           <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-chart-2/20 rounded-full blur-3xl animate-gradient-shift-2" />
 
           <div className="relative z-10 mx-auto max-w-7xl px-6 py-32 lg:px-8">
@@ -62,6 +62,7 @@ export default function HomePage() {
               </FadeUp>
             </div>
           </div>
+
           <div className="absolute bottom-0 left-0 right-0 h-32 bg-linear-to-t from-background to-transparent" />
         </section>
 

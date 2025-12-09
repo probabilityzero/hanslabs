@@ -37,7 +37,7 @@ export function SiteFooter() {
           <div className="col-span-2 sm:col-span-2 md:col-span-4 lg:col-span-1 mb-8 lg:mb-0">
             <Link href="/" className="flex items-center gap-2">
               <Image
-                src="/logo.png"
+                src="/logo-200px.png"
                 alt="Han's Labs Logo"
                 width={40}
                 height={40}

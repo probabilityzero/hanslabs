@@ -1,6 +1,6 @@
 import { ProjectsGrid } from "@/components/projects-grid"
-import { AnimatedBackground } from "@/components/animated-background"
-import { FadeUp } from "@/components/animations"
+import { AnimatedBackground } from "@/components/hero-grid-blobs"
+import { FadeUp } from "@/components/hero-transitions"
 import { projects, getAllTags } from "@/lib/projects-data"
 
 export const metadata = {
@@ -36,7 +36,7 @@ export default function ProjectsPage() {
       </AnimatedBackground>
 
       <FadeUp delay={75}>
-      <ProjectsGrid projects={projects} tags={tags} />
+        <ProjectsGrid projects={projects} tags={tags} />
       </FadeUp>
     </main>
   )

@@ -16,6 +16,7 @@ export interface Project {
   metrics?: { label: string; value: string }[]
   architecture?: string
   downloads?: { name: string; url: string }[]
+  isFeatured?: boolean
 }
 
 export const projects: Project[] = [
@@ -47,6 +48,7 @@ export const projects: Project[] = [
       { name: "Technical Whitepaper", url: "#" },
       { name: "Architecture Slides", url: "#" },
     ],
+    isFeatured: true,
   },
   {
     slug: "neural-canvas",
@@ -60,7 +62,7 @@ export const projects: Project[] = [
     status: "prototype",
     tags: ["AI", "Computer Vision", "Design Tools"],
     stack: ["Python", "PyTorch", "React", "WebGL", "FastAPI"],
-    image: "/ai-art-generation-interface-dark-theme.jpg",
+    image: "",
     hasDemo: true,
     demoUrl: "/showcase/neural-canvas/demo",
     metrics: [
@@ -94,6 +96,7 @@ export const projects: Project[] = [
     ],
     architecture:
       "The simulator uses tensor network contraction for efficient state computation. The UI renders quantum states as interactive Bloch spheres and probability distributions, updated in real-time via Web Workers to maintain responsive interaction.",
+    isFeatured: true,
   },
   {
     slug: "semantic-search",
@@ -153,6 +156,27 @@ export const projects: Project[] = [
       { label: "TPS", value: "1000" },
       { label: "Nodes Tested", value: "100" },
     ],
+  },
+  {
+    slug: "business-card-maker",
+    title: "iProfile: Digital Cards",
+    description: "Lightweight distributed ledger for IoT networks with Byzantine fault tolerance.",
+    overview:
+      "MicroLedger is designed for resource-constrained environments where traditional blockchain solutions are too heavy. It provides Byzantine fault tolerance with minimal memory and computation overhead.",
+    problemStatement:
+      "IoT networks need verifiable, tamper-proof records but can't run full blockchain nodes. MicroLedger provides consensus guarantees suitable for embedded systems with limited resources.",
+    status: "research",
+    tags: ["Distributed Systems", "IoT", "Consensus"],
+    stack: ["Rust", "embedded-hal", "PBFT", "MQTT"],
+    image: "/distributed-ledger-network-visualization-dark.jpg",
+    hasDemo: false,
+    repoUrl: "https://github.com/hanslabs/microledger",
+    metrics: [
+      { label: "Memory Usage", value: "<512KB" },
+      { label: "TPS", value: "1000" },
+      { label: "Nodes Tested", value: "100" },
+    ],
+    isFeatured: true,
   },
 ]
 

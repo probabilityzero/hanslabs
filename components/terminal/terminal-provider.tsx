@@ -1,6 +1,6 @@
 "use client"
 
-import { createContext, useContext, useCallback, useMemo, type ReactNode } from "react"
+import { createContext, useContext, useCallback, useMemo, type ReactNode, useEffect } from "react"
 import { useRouter } from "next/navigation"
 import { useTheme } from "next-themes"
 import { useTerminalState } from "@/hooks/use-terminal"
@@ -37,6 +37,24 @@ export function TerminalProvider({ children }: { children: ReactNode }) {
     setInputMode,
     handlePasswordSubmit,
   } = useTerminalState()
+
+  // Check auth status on mount
+  useEffect(() => {
+    const checkAuth = async () => {
+      try {
+        const res = await fetch("/api/admin/auth/check")
+        if (res.ok) {
+          const data = await res.json()
+          if (data.authenticated) {
+            setUser("root")
+          }
+        }
+      } catch {
+        // Ignore errors
+      }
+    }
+    checkAuth()
+  }, [])
 
   const commands = useMemo(() => createCommands({
     router: { push: router.push },

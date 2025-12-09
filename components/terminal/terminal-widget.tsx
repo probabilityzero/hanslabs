@@ -118,7 +118,7 @@ export function TerminalWidget() {
       style={{ ...getStyles(), width: state === "expanded" ? size.width : 280, height: state === "expanded" ? size.height : "auto", maxHeight: "calc(100vh - 48px)" }}
     >
       <div className="h-full flex flex-col bg-[#1c1c1e]/95 backdrop-blur-xl rounded-xl overflow-hidden shadow-2xl shadow-black/40 border border-white/10">
-        <div className="flex items-center px-4 py-3 bg-gradient-to-b from-[#3c3c3e] to-[#2c2c2e] border-b border-black/20 shrink-0">
+        <div className="flex items-center px-3 bg-gradient-to-b from-[#3c3c3e] to-[#2c2c2e] border-b border-black/20 shrink-0">
           <div className="flex items-center gap-2 pr-4 relative z-10" onClick={e => e.stopPropagation()} onMouseDown={e => e.stopPropagation()}>
             <div className="absolute -inset-2" />
             <button onClick={minimize} className="w-3 h-3 rounded-full bg-[#ff5f57] hover:brightness-110 group relative shadow-sm" aria-label="Close">
@@ -132,7 +132,7 @@ export function TerminalWidget() {
             </button>
           </div>
           
-          <div onMouseDown={handleMouseDown} className={`flex-1 flex items-center justify-center select-none ${isDragging ? "cursor-grabbing" : "cursor-grab"}`}>
+          <div onMouseDown={handleMouseDown} className={`flex-1 max-w-auto py-2 flex items-center justify-center select-none ${isDragging ? "cursor-grabbing" : "cursor-grab"}`}>
             <span className={`text-xs font-medium ${user === "root" ? "text-[#ff453a]" : "text-[#a0a0a5]"}`}>
               {user}@labs — zsh
             </span>

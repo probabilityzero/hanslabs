@@ -87,7 +87,7 @@ export function TerminalWidget() {
     return (
       <button
         onClick={expand}
-        className="fixed bottom-14 left-6 z-50 group transition-transform duration-200 hover:scale-110 active:scale-95"
+        className="fixed bottom-5 left-5 z-50 group transition-transform duration-200 hover:scale-110 active:scale-95"
         aria-label="Open terminal"
       >
         <Image

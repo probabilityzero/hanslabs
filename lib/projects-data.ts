@@ -33,7 +33,7 @@ export const projects: Project[] = [
     stack: ["Rust", "SIMD", "Arrow", "gRPC", "Kubernetes"],
     image: "/abstract-database-visualization-dark-theme.jpg",
     hasDemo: true,
-    demoUrl: "/projects/framedb/demo",
+    demoUrl: "/showcase/framedb/demo",
     repoUrl: "https://github.com/hanslabs/framedb",
     metrics: [
       { label: "Write Throughput", value: "2M/sec" },
@@ -62,7 +62,7 @@ export const projects: Project[] = [
     stack: ["Python", "PyTorch", "React", "WebGL", "FastAPI"],
     image: "/ai-art-generation-interface-dark-theme.jpg",
     hasDemo: true,
-    demoUrl: "/projects/neural-canvas/demo",
+    demoUrl: "/showcase/neural-canvas/demo",
     metrics: [
       { label: "Generation Time", value: "2.3 sec" },
       { label: "Model Parameters", value: "1.2B" },

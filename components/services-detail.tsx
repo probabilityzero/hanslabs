@@ -21,11 +21,11 @@ interface CapabilityProps {
   reversed?: boolean
 }
 
-export function CapabilityDetail({ capability, reversed = false }: CapabilityProps) {
+export function ServicesDetail({ capability, reversed = false }: CapabilityProps) {
   const Icon = capability.icon
 
   return (
-    <section id={capability.id} className={cn("py-24 lg:py-32 border-t border-border", reversed && "bg-card/50")}>
+    <section id={capability.id} className={cn("py-24 lg:py-32", reversed && "bg-card/50")}>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Header */}
         <div className="flex items-center gap-4 mb-12">

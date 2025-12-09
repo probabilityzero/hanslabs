@@ -1,11 +1,11 @@
 import type React from "react"
 import type { Metadata } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
-import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { ThemeProvider } from "@/components/theme-provider"
+import { TerminalProvider, TerminalWidget } from "@/components/terminal"
 
 const geistSans = Geist({ 
   subsets: ["latin"],
@@ -17,7 +17,6 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
 })
 
-// <CHANGE> Updated metadata for Han's Labs
 export const metadata: Metadata = {
   title: "Han's Labs | Software Development Agency",
   description:
@@ -43,17 +42,19 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased min-h-screen bg-background`}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="dark"
+          defaultTheme="light"
           enableSystem
           disableTransitionOnChange={false}
         >
-          <SiteHeader />
-          <main className="pt-16">
+          <TerminalProvider>
+            <SiteHeader />
+            <main className="pt-16">
         {children}
         </main>
         <SiteFooter />
+        <TerminalWidget />
+        </TerminalProvider>
         </ThemeProvider>
-        <Analytics />
       </body>
     </html>
   )

@@ -65,7 +65,7 @@ export function FeaturedProjects() {
           {featuredProjects.map((project) => (
             <Link
               key={project.slug}
-              href={`/projects/${project.slug}`}
+              href={`/showcase/${project.slug}`}
               className="group relative flex flex-col overflow-hidden rounded-2xl border border-border bg-card transition-all hover:border-primary/50"
             >
               <div className="aspect-video overflow-hidden bg-secondary">

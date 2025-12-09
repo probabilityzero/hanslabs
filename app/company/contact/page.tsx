@@ -75,7 +75,7 @@ export default function ContactPage() {
                       <div className="text-sm text-muted-foreground">{item.label}</div>
                       <div className="text-foreground font-medium truncate">{item.value}</div>
                     </div>
-                    <ArrowUpRight className="h-4 w-4 text-muted-foreground opacity-0 -translate-x-2 translate-y-2 group-hover:opacity-100 group-hover:translate-x-0 group-hover:translate-y-0 transition-all duration-300 flex-shrink-0" />
+                    <ArrowUpRight className="h-4 w-4 text-muted-foreground opacity-0 -translate-x-2 translate-y-2 group-hover:opacity-100 group-hover:translate-x-0 group-hover:translate-y-0 transition-all duration-300 shrink-0" />
                   </a>
                 ))}
               </div>

@@ -1,17 +1,18 @@
 import Link from "next/link"
+import dynamic from "next/dynamic"
 import { ArrowRight, Play } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { PillarsSection } from "@/components/pillars-section"
-import { FeaturedProjects } from "@/components/featured-projects"
-import { StatsSection } from "@/components/stats-section"
-import { CTASection } from "@/components/cta-section"
-import { FadeUp, FadeIn } from "@/components/animations"
+import { FadeUp } from "@/components/animations"
+
+const PillarsSection = dynamic(() => import("@/components/pillars-section").then(m => ({ default: m.PillarsSection })))
+const FeaturedProjects = dynamic(() => import("@/components/featured-projects").then(m => ({ default: m.FeaturedProjects })))
+const StatsSection = dynamic(() => import("@/components/stats-section").then(m => ({ default: m.StatsSection })))
+const CTASection = dynamic(() => import("@/components/cta-section").then(m => ({ default: m.CTASection })))
 
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-background">
       <main>
-        {/* Hero Section */}
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 grid-pattern opacity-30" />
 
@@ -61,8 +62,7 @@ export default function HomePage() {
               </FadeUp>
             </div>
           </div>
-
-          <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
+          <div className="absolute bottom-0 left-0 right-0 h-32 bg-linear-to-t from-background to-transparent" />
         </section>
 
         <PillarsSection />

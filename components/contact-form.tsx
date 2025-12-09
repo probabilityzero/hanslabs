@@ -440,7 +440,7 @@ export function ContactForm({ showResponseTime = false }: ContactFormProps) {
       {/* Response Time - Inside Form */}
       {showResponseTime && (
         <div className="flex items-start gap-3 mt-6 p-4 rounded-xl bg-card/50 border border-border/50">
-          <Clock className="h-5 w-5 text-muted-foreground mt-0.5 flex-shrink-0" />
+          <Clock className="h-5 w-5 text-muted-foreground mt-0.5 shrink-0" />
           <div>
             <div className="text-sm font-medium text-foreground">Response Time</div>
             <p className="text-sm text-muted-foreground mt-1">
